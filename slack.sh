@@ -50,7 +50,7 @@ payload="payload={\"channel\": \"${to//\"/\\\"}\",  \
 return=$(curl $proxy -sm 5 --data-urlencode "${payload}" $url -A 'zabbix-slack-alertscript / https://github.com/ericoc/zabbix-slack-alertscript')
 
 # If the response body was not what was expected from Slack ("ok"), something went wrong so print the Slack error to stderr and exit with non-zero
-if [[ "$return" != 'ok' ]]; then
+if [[ "$return" != 'ok' ]]; the
     >&2 echo "$return"
     exit 1
 fi
